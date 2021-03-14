@@ -3,7 +3,7 @@
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
         <div
-          class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg"
+          class="shadow-lg overflow-hidden border-b border-gray-200 sm:rounded-lg"
         >
           <table class="min-w-full divide-y divide-gray-200">
             <thead class="bg-gray-50">
@@ -44,7 +44,7 @@
                     <div class="flex-shrink-0 h-10 w-10">
                       <img
                         class="h-10 w-10 rounded-full"
-                        v-bind:src="users.profile_img"
+                        src="https://img.icons8.com/pastel-glyph/2x/user-male.png"
                         alt=""
                       />
                     </div>
@@ -58,17 +58,17 @@
                     </div>
                   </div>
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td class="px-4 py-4 whitespace-nowrap">
                   <div class="text-sm text-gray-900">
                     {{ users.sessions[0] }}
                   </div>
                   <div class="text-sm text-gray-500">Optimization</div>
                 </td>
 
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-black-800">
+                <td class="px-4 py-4 whitespace-nowrap text-sm text-black-800">
                   {{ users.department }}
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td class="px-4 py-4 whitespace-nowrap">
                   <span
                     v-if="users.status"
                     class="px-2 inline-flex text-xs leading-5 font-semibold text-green-500"

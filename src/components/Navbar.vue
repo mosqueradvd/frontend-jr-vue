@@ -58,22 +58,22 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a
                 href="#"
-                class="text-white px-3 py-2 rounded-md text-sm font-medium"
+                class="text-white px-4 py-2 rounded-md text-lg font-medium"
                 >Menu</a
               >
               <a
                 href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                class="text-gray-300 px-4 py-2 rounded-md text-lg font-medium"
                 >Menu</a
               >
               <a
                 href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                class="text-gray-300 px-4 py-2 rounded-md text-lg font-medium"
                 >Menu</a
               >
               <a
                 href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                class="text-gray-300 px-4 py-2 rounded-md text-lg font-medium"
                 >Menu</a
               >
             </div>
@@ -102,7 +102,7 @@
             </div>
 
             <div
-              class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+              class="origin-top-right absolute right-0 mt-2 w-60 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="user-menu"
@@ -111,7 +111,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
-                class="text-sm text-gray-400 w-8 h-8 inline-block"
+                class="text-sm text-gray-400 w-8 h-8 inline-block m-3"
               >
                 <path
                   fill-rule="evenodd"
@@ -121,12 +121,12 @@
               </svg>
               <a
                 href="#"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                class="contents px-4 py-2 text-lg text-gray-700 hover:bg-gray-100"
                 role="menuitem"
                 >My Profile</a
               >
               <p
-                class="block px-4 py-2 text-sm text-gray-500 hover:bg-gray-100"
+                class="px-14 py-0 text-sm text-gray-500 hover:bg-gray-100"
                 role="menuitem"
               >
                 Change settings of your account.
@@ -136,7 +136,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
-                class="text-sm text-red-700 w-8 h-8 inline-block"
+                class="text-sm text-red-500 w-8 h-8 inline-block m-3"
               >
                 <path
                   fill-rule="evenodd"
@@ -146,7 +146,7 @@
               </svg>
               <a
                 href="#"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                class="contents px-4 py-2 text-sm text-red-500 hover:bg-red-500"
                 role="menuitem"
                 >Logout</a
               >
