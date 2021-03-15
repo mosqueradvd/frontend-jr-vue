@@ -1,12 +1,15 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg-gray-300 dark:bg-gray-800">
     <Navbar />
-    <h3 class="text-xl text-gray-600 ml-16 mt-10 font-medium">
+    <h3
+      class="text-xl text-gray-600 ml-16 mt-10 font-medium dark:text-gray-200"
+    >
       Home / <u><a href="#">Reports & Insights</a></u>
     </h3>
+
     <div class="grid grid-flow-col my-28 pl-4 pr-4">
-      <div class="bg-white">
-        <div class="shadow-lg ml-6">
+      <div>
+        <div>
           <div id="chart">
             <Chart />
             <apexchart
@@ -24,9 +27,9 @@
 </template>
 
 <script>
+import Chart from "./components/Chart";
 import Navbar from "./components/Navbar";
 import ContainerDashboard from "./components/ContainerDashboard";
-import Chart from "./components/Chart";
 
 export default {
   name: "app",
@@ -50,6 +53,17 @@ body,
   height: 100%;
   margin: 0;
   overflow: auto;
-  background: #e5e5e5;
+}
+
+.light-mode {
+  --bg-background-primary: #e5e5e5;
+  --bg-background-secondary: #eaeaea;
+  --bg-background-ternary: white;
+}
+
+.dark-mode {
+  --bg-background-primary: #0e0e0e;
+  --bg-background-secondary: #151515;
+  --bg-background-ternary: #292929;
 }
 </style>

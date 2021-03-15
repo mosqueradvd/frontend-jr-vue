@@ -1,6 +1,6 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <nav class="bg-blue-800">
+  <nav class="bg-blue-800 dark:bg-gray-900">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -58,7 +58,7 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a
                 href="#"
-                class="text-white px-4 py-2 rounded-md text-lg font-medium"
+                class="text-gray-200 px-4 py-2 rounded-md text-lg font-medium"
                 >Menu</a
               >
               <a
@@ -76,6 +76,26 @@
                 class="text-gray-300 px-4 py-2 rounded-md text-lg font-medium"
                 >Menu</a
               >
+              <button
+                href="#"
+                class="text-gray-300 px-4 py-2 rounded-md text-lg font-medium"
+                v-on:click="toggleTheme"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -96,13 +116,13 @@
                 <img
                   class="h-8 w-8 rounded-full"
                   src="https://images.generated.photos/BvSjRAQ8W3RHt-homF-1kj6iAI28AYZd-47HpI0cAKQ/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zLzAx/NjM4OTguanBn.jpg"
-                  alt=""
+                  alt="User profile pic"
                 />
               </button>
             </div>
 
             <div
-              class="origin-top-right absolute right-0 mt-2 w-60 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+              class="origin-top-right absolute right-0 mt-2 w-60 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-gray-900"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="user-menu"
@@ -121,14 +141,11 @@
               </svg>
               <a
                 href="#"
-                class="contents px-4 py-2 text-lg text-gray-700 hover:bg-gray-100"
+                class="contents px-4 py-2 text-lg text-gray-700 hover:bg-gray-100 dark:text-gray-300"
                 role="menuitem"
                 >My Profile</a
               >
-              <p
-                class="px-14 py-0 text-sm text-gray-500 hover:bg-gray-100"
-                role="menuitem"
-              >
+              <p class="px-14 py-0 text-sm text-gray-500" role="menuitem">
                 Change settings of your account.
               </p>
 
@@ -188,5 +205,26 @@
 <script>
 export default {
   name: "Navbar",
+
+  data() {
+    return {
+      theme: "",
+    };
+  },
+
+  methods: {
+    toggleTheme() {
+      let htmlClasses = document.querySelector("html").classList;
+      if (localStorage.theme == "dark") {
+        htmlClasses.remove("dark");
+        localStorage.removeItem("theme");
+        this.theme = "light";
+      } else {
+        htmlClasses.add("dark");
+        localStorage.theme = "dark";
+        this.theme = "dark";
+      }
+    },
+  },
 };
 </script>

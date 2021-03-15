@@ -1,34 +1,38 @@
 <template>
   <div class="flex flex-col">
     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-      <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+      <div
+        class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8 dark:bg-gray-900"
+      >
         <div
-          class="shadow-lg overflow-hidden border-b border-gray-200 sm:rounded-lg"
+          class="shadow-lg overflow-hidden border-b border-gray-200 sm:rounded-lg dark:bg-gray-900"
         >
-          <table class="min-w-full divide-y divide-gray-200">
-            <thead class="bg-gray-50">
+          <table
+            class="min-w-full divide-y divide-gray-200 dark:border-gray-900"
+          >
+            <thead class="bg-gray-50 dark:bg-gray-900">
               <tr>
                 <th
                   scope="col"
-                  class="px-6 py-3 text-left text-sm font-medium text-gray-600 tracking-wider"
+                  class="px-6 py-3 text-left text-sm font-bold text-gray-600 tracking-wider dark:text-gray-400"
                 >
                   Employee
                 </th>
                 <th
                   scope="col"
-                  class="px-6 py-3 text-left text-sm font-medium text-gray-600 tracking-wider"
+                  class="px-4 py-3 text-left text-sm font-bold text-gray-600 tracking-wider dark:text-gray-400"
                 >
                   Last login
                 </th>
                 <th
                   scope="col"
-                  class="px-6 py-3 text-left text-sm font-medium text-gray-600 tracking-wider"
+                  class="px-4 py-3 text-left text-sm font-bold text-gray-600 tracking-wider dark:text-gray-400"
                 >
                   Department
                 </th>
                 <th
                   scope="col"
-                  class="px-6 py-3 text-left text-sm font-medium text-gray-600 tracking-wider"
+                  class="px-6 py-3 text-left text-sm font-bold text-white-600 tracking-wider dark:text-gray-400"
                 >
                   Status
                 </th>
@@ -39,13 +43,15 @@
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
               <tr v-for="(users, i) in users.users" :key="i">
-                <td class="px-6 py-4 whitespace-nowrap">
+                <td
+                  class="px-6 py-4 whitespace-nowrap text-white dark:bg-gray-900 dark:border-gray-900"
+                >
                   <div class="flex items-center">
                     <div class="flex-shrink-0 h-10 w-10">
                       <img
                         class="h-10 w-10 rounded-full"
                         src="https://img.icons8.com/pastel-glyph/2x/user-male.png"
-                        alt=""
+                        alt="user profile pic"
                       />
                     </div>
                     <div class="ml-4">
@@ -58,17 +64,20 @@
                     </div>
                   </div>
                 </td>
-                <td class="px-4 py-4 whitespace-nowrap">
-                  <div class="text-sm text-gray-900">
-                    {{ users.sessions[0] }}
+                <td
+                  class="px-4 py-4 whitespace-nowrap text-white dark:bg-gray-900"
+                >
+                  <div class="text-sm text-gray-900 dark:text-gray-400">
+                    {{ users.sessions[0].slice(0, 10) }}
                   </div>
-                  <div class="text-sm text-gray-500">Optimization</div>
                 </td>
 
-                <td class="px-4 py-4 whitespace-nowrap text-sm text-black-800">
+                <td
+                  class="px-4 py-4 whitespace-nowrap text-sm text-black-800 dark:bg-gray-900 dark:text-gray-400"
+                >
                   {{ users.department }}
                 </td>
-                <td class="px-4 py-4 whitespace-nowrap">
+                <td class="px-4 py-4 whitespace-nowrap dark:bg-gray-900">
                   <span
                     v-if="users.status"
                     class="px-2 inline-flex text-xs leading-5 font-semibold text-green-500"
@@ -83,7 +92,7 @@
                   </span>
                 </td>
                 <td
-                  class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
+                  class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium dark:bg-gray-900"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
